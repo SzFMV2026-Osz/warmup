@@ -11,6 +11,7 @@ namespace AutomatedCar.Models
             : base(x, y, filename)
         {
             this.virtualFunctionBus = new VirtualFunctionBus();
+            new DummySensor(this.virtualFunctionBus, this);
             this.ZIndex = 10;
         }
 
@@ -22,13 +23,13 @@ namespace AutomatedCar.Models
 
         public PolylineGeometry Geometry { get; set; }
 
-        /// <summary>Starts the automated cor by starting the ticker in the Virtual Function Bus, that cyclically calls the system components.</summary>
+        /// <summary>Starts the automated car by starting the ticker in the Virtual Function Bus, that cyclically calls the system components.</summary>
         public void Start()
         {
             this.virtualFunctionBus.Start();
         }
 
-        /// <summary>Stops the automated cor by stopping the ticker in the Virtual Function Bus, that cyclically calls the system components.</summary>
+        /// <summary>Stops the automated car by stopping the ticker in the Virtual Function Bus, that cyclically calls the system components.</summary>
         public void Stop()
         {
             this.virtualFunctionBus.Stop();
