@@ -23,8 +23,8 @@
             Circle circle = World.Instance.WorldObjects.OfType<Circle>().FirstOrDefault();
             AutomatedCar car = World.Instance.ControlledCar;
 
-            this.dummyPacket.DistanceX = car.X - circle.X;
-            this.dummyPacket.DistanceY = car.Y - circle.Y;
+            this.dummyPacket.DistanceX = Math.Abs(car.X - circle.X);
+            this.dummyPacket.DistanceY = Math.Abs(car.Y - circle.Y);
         }
     }
 }
