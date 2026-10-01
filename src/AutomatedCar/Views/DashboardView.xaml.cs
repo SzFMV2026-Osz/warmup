@@ -1,5 +1,6 @@
 namespace AutomatedCar.Views
 {
+    using AutomatedCar.ViewModels;
     using Avalonia.Controls;
     using Avalonia.Markup.Xaml;
 
@@ -7,7 +8,7 @@ namespace AutomatedCar.Views
     {
         public DashboardView()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();         
         }
 
         private void InitializeComponent()
